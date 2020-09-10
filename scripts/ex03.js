@@ -9,8 +9,8 @@ function entradaDeValores() {
 
     window.alert(` O valor da compra sem imposto R$ ${valorDaCompra} \n 3% de imposto sobre o valor compra online R$ ${valorImposto} \n total R$ ${valorDaCompra + valorImposto}`)
 
-/*     console.log(` O valor da compra é de R$ ${valorDaCompra} \n 3% de imposto sobre compras online R$ \n total R$ ${valorDaCompra} `)
- */    
+    console.log(` O valor da compra sem imposto R$ ${valorDaCompra} \n 3% de imposto sobre o valor compra online R$ ${valorImposto} \n total R$ ${valorDaCompra + valorImposto} `)
+ 
     console.log(`${calcularImposto(valorDaCompra)} e ${valorImposto}`)
 }
 
