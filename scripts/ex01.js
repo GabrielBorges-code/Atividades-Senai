@@ -1,5 +1,6 @@
 /* Crie um programa em javascrip que calcula a média de um estudante a partir da nota de 3 provas.
 Requisitos: Entrada de dados e saída de dados na janela e no console. */
+
 window.alert('Vamos calcular a sua média. Por favor Digite a nota das suas 3 provas')
 
 var nota1 = prompFloat ('Digite a primeira nota', 'Por favor, digite um número.\nTente novamente.')
@@ -14,7 +15,7 @@ function mediaNotasPopUp(){
     situacao(media)
 }
 
-//Verifica se a entrada do dado é do tipo 'Number'. Peguei esse trecho de código no stack over flow
+//Verifica se a entrada de dados é do tipo 'Number'. Fonte: https://pt.stackoverflow.com/questions/312947/como-permitir-apenas-n%C3%BAmeros-em-um-prompt-em-javascript#:~:text=Voc%C3%AA%20pode%20criar%20uma%20vers%C3%A3o,prompt(msg))%3B%20if%20(!
 function prompFloat(mensagem, tenteNovamente) {
     var msg = mensagem;
     while (true) {
