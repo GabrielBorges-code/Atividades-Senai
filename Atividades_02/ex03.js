@@ -1,4 +1,4 @@
-// 3 👉Crie um programa que apresenta um cardápio ao cliente
+// 3 👉 Crie um programa que apresenta um cardápio ao cliente
 // de pizzas diversas, com entrada de dados.
 // Dica(Use estruturas de decisão e objetos ou vetores...)
 
