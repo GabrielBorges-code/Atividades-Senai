@@ -7,6 +7,7 @@
 
 package code;
 
+import java.util.Scanner;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,7 +15,6 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Scanner;
 import jdk.jfr.events.FileWriteEvent;
 
 /**
@@ -32,6 +32,7 @@ public class escreveArquivo {
         System.out.println("Digite sua nota");
         Integer nota = entradaUsuario.nextInt();
         
+        //Escreve em um arquivo já existente
         /*
         Path caminho = Paths.get("C:\\Users\\gabri\\Documents\\GitHub\\Atividades-Senai\\Atividades_03\\escritaDeDados.txt");
         String escrita = nome + nota;
@@ -42,7 +43,9 @@ public class escreveArquivo {
             
         }
         */
-        String caminhoArquivo = ("C:\\\\Users\\\\gabri\\\\Documents\\\\GitHub\\\\Atividades-Senai\\\\Atividades_03\\nome e nota.txt");
+        
+        //cria um arquivo 
+        String caminhoArquivo = ("C:\\\\Users\\\\gabri\\\\Documents\\\\GitHub\\\\Atividades-Senai\\\\Atividades_03\\escritaDeDados.txt");
         String textoEscrever = nome + " " + nota;
         
         try ( 
@@ -53,11 +56,11 @@ public class escreveArquivo {
                 
                 ){
             
-            
             escritorDeArquivos.append(textoEscrever);
             
         } catch (IOException e) {
             e.printStackTrace();
+            
         }
        
     }
