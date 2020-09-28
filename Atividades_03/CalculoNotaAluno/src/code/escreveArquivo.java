@@ -15,6 +15,9 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import jdk.jfr.events.FileWriteEvent;
 
 /**
@@ -26,26 +29,36 @@ public class escreveArquivo {
     public static void main(String[] args) {
         Scanner entradaUsuario = new Scanner(System.in);
         
-        System.out.println("Digite seu nomme");
+        Calendar c = Calendar.getInstance();
+
+	/*System.out.println("Data/Hora atual: "+c.getTime());
+	System.out.println("Ano: "+c.get(Calendar.YEAR));
+	System.out.println("Mês: "+c.get(Calendar.MONTH));
+	System.out.println("Dia do Mês: "+c.get(Calendar.DAY_OF_MONTH));
+        System.out.println("teste meu: " + c.get(Calendar.DATE));*/
+        
+        /*System.out.println("Digite seu nomme");
         String nome = entradaUsuario.nextLine();
         
         System.out.println("Digite sua nota");
         Integer nota = entradaUsuario.nextInt();
         
+        Calendar c = Calendar.getInstance();
+	System.out.println("Data e Hora atual: " + c.getTime());*/
+        
         //Escreve em um arquivo já existente
-        /*
-        Path caminho = Paths.get("C:\\Users\\gabri\\Documents\\GitHub\\Atividades-Senai\\Atividades_03\\escritaDeDados.txt");
+        
+        /*Path caminho = Paths.get("C:\\Users\\gabri\\Documents\\GitHub\\Atividades-Senai\\Atividades_03\\escritaDeDados.txt");
         String escrita = nome + nota;
         byte [] textoEmByte = escrita.getBytes();
         try{
             Files.write(caminho, textoEmByte);
         }catch(Exception erro){
             
-        }
-        */
+        }*/
         
         //cria um arquivo 
-        String caminhoArquivo = ("C:\\\\Users\\\\gabri\\\\Documents\\\\GitHub\\\\Atividades-Senai\\\\Atividades_03\\escritaDeDados.txt");
+       /*String caminhoArquivo = ("C:\\\\Users\\\\gabri\\\\Documents\\\\GitHub\\\\Atividades-Senai\\\\Atividades_03\\novoArquivo.txt");
         String textoEscrever = nome + " " + nota;
         
         try ( 
@@ -61,8 +74,8 @@ public class escreveArquivo {
         } catch (IOException e) {
             e.printStackTrace();
             
-        }
-       
+        }*/
+        
     }
     
 }
