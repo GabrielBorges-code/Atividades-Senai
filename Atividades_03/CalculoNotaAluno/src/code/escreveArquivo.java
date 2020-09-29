@@ -35,66 +35,62 @@ public class escreveArquivo {
         
         SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
         
-       // SimpleDateFormat dataFormatada1 = new SimpleDateFormat("dd/MM/yyyy");
-
         Calendar calendario = Calendar.getInstance();
-        Date data = new Date();
         
-        System.out.println(dataFormatada.format(calendario.getTime()));
-        System.out.println(dataFormatada.format(data));
+        System.out.println("Data e hora atual: " + dataFormatada.format(calendario.getTime()));
         
-	String minhaData = "12/05/1998";
+        System.out.println("Digite uma data no formato dd/mm/yyyy");
+	String minhaData = entradaUsuario.nextLine();
         
         try {
             Date minhaDataEmDate = dataFormatada.parse(minhaData);
-            System.out.println("Minha data: " + dataFormatada.format(minhaDataEmDate));
+            
+            System.out.printf("Minha data: " + dataFormatada.format(minhaDataEmDate));
+            
         } catch (ParseException ex) {
             Logger.getLogger(escreveArquivo.class.getName()).log(Level.SEVERE, null, ex);
             ex.printStackTrace();
             
         }
-            
-            /*System.out.println("Digite seu nomme");
-            String nome = entradaUsuario.nextLine();
-            
-            System.out.println("Digite sua nota");
-            Integer nota = entradaUsuario.nextInt();
-            
-            Calendar c = Calendar.getInstance();
-            System.out.println("Data e Hora atual: " + c.getTime());*/
-            
-            //Escreve em um arquivo já existente
-            
-            /*Path caminho = Paths.get("C:\\Users\\gabri\\Documents\\GitHub\\Atividades-Senai\\Atividades_03\\escritaDeDados.txt");
-            String escrita = nome + nota;
-            byte [] textoEmByte = escrita.getBytes();
-            try{
-            Files.write(caminho, textoEmByte);
-            }catch(Exception erro){
-            
-            }*/
-            
-            //cria um arquivo
-            /*String caminhoArquivo = ("C:\\\\Users\\\\gabri\\\\Documents\\\\GitHub\\\\Atividades-Senai\\\\Atividades_03\\novoArquivo.txt");
-            String textoEscrever = nome + " " + nota;
-            
-            try (
-            
-            FileWriter criadorDeArquivo = new FileWriter(caminhoArquivo, true);
-            BufferedWriter buffer = new BufferedWriter (criadorDeArquivo);
-            PrintWriter escritorDeArquivos = new PrintWriter(buffer);
-            
-            ){
-            
-            escritorDeArquivos.append(textoEscrever);
-            
-            } catch (IOException e) {
-            e.printStackTrace();
-            
-            }*/
-        
-        
-        
+                   
+        /*System.out.println("Digite seu nomme");
+        String nome = entradaUsuario.nextLine();
+
+        System.out.println("Digite sua nota");
+        Integer nota = entradaUsuario.nextInt();
+
+        Calendar c = Calendar.getInstance();
+        System.out.println("Data e Hora atual: " + c.getTime());*/
+
+        //Escreve em um arquivo já existente
+
+        /*Path caminho = Paths.get("C:\\Users\\gabri\\Documents\\GitHub\\Atividades-Senai\\Atividades_03\\escritaDeDados.txt");
+        String escrita = nome + nota;
+        byte [] textoEmByte = escrita.getBytes();
+        try{
+        Files.write(caminho, textoEmByte);
+        }catch(Exception erro){
+
+        }*/
+
+        //cria um arquivo
+        /*String caminhoArquivo = ("C:\\\\Users\\\\gabri\\\\Documents\\\\GitHub\\\\Atividades-Senai\\\\Atividades_03\\novoArquivo.txt");
+        String textoEscrever = nome + " " + nota;
+
+        try (
+
+        FileWriter criadorDeArquivo = new FileWriter(caminhoArquivo, true);
+        BufferedWriter buffer = new BufferedWriter (criadorDeArquivo);
+        PrintWriter escritorDeArquivos = new PrintWriter(buffer);
+
+        ){
+
+        escritorDeArquivos.append(textoEscrever);
+
+        } catch (IOException e) {
+        e.printStackTrace();
+
+        }*/       
     }
     
 }
