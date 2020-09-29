@@ -16,8 +16,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import jdk.jfr.events.FileWriteEvent;
 
 /**
@@ -29,52 +33,67 @@ public class escreveArquivo {
     public static void main(String[] args) {
         Scanner entradaUsuario = new Scanner(System.in);
         
-        Calendar c = Calendar.getInstance();
+        SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
+        
+       // SimpleDateFormat dataFormatada1 = new SimpleDateFormat("dd/MM/yyyy");
 
-	/*System.out.println("Data/Hora atual: "+c.getTime());
-	System.out.println("Ano: "+c.get(Calendar.YEAR));
-	System.out.println("Mês: "+c.get(Calendar.MONTH));
-	System.out.println("Dia do Mês: "+c.get(Calendar.DAY_OF_MONTH));
-        System.out.println("teste meu: " + c.get(Calendar.DATE));*/
+        Calendar calendario = Calendar.getInstance();
+        Date data = new Date();
         
-        /*System.out.println("Digite seu nomme");
-        String nome = entradaUsuario.nextLine();
+        System.out.println(dataFormatada.format(calendario.getTime()));
+        System.out.println(dataFormatada.format(data));
         
-        System.out.println("Digite sua nota");
-        Integer nota = entradaUsuario.nextInt();
+	String minhaData = "12/05/1998";
         
-        Calendar c = Calendar.getInstance();
-	System.out.println("Data e Hora atual: " + c.getTime());*/
-        
-        //Escreve em um arquivo já existente
-        
-        /*Path caminho = Paths.get("C:\\Users\\gabri\\Documents\\GitHub\\Atividades-Senai\\Atividades_03\\escritaDeDados.txt");
-        String escrita = nome + nota;
-        byte [] textoEmByte = escrita.getBytes();
-        try{
-            Files.write(caminho, textoEmByte);
-        }catch(Exception erro){
+        try {
+            Date minhaDataEmDate = dataFormatada.parse(minhaData);
+            System.out.println("Minha data: " + dataFormatada.format(minhaDataEmDate));
+        } catch (ParseException ex) {
+            Logger.getLogger(escreveArquivo.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
             
-        }*/
-        
-        //cria um arquivo 
-       /*String caminhoArquivo = ("C:\\\\Users\\\\gabri\\\\Documents\\\\GitHub\\\\Atividades-Senai\\\\Atividades_03\\novoArquivo.txt");
-        String textoEscrever = nome + " " + nota;
-        
-        try ( 
-                
+        }
+            
+            /*System.out.println("Digite seu nomme");
+            String nome = entradaUsuario.nextLine();
+            
+            System.out.println("Digite sua nota");
+            Integer nota = entradaUsuario.nextInt();
+            
+            Calendar c = Calendar.getInstance();
+            System.out.println("Data e Hora atual: " + c.getTime());*/
+            
+            //Escreve em um arquivo já existente
+            
+            /*Path caminho = Paths.get("C:\\Users\\gabri\\Documents\\GitHub\\Atividades-Senai\\Atividades_03\\escritaDeDados.txt");
+            String escrita = nome + nota;
+            byte [] textoEmByte = escrita.getBytes();
+            try{
+            Files.write(caminho, textoEmByte);
+            }catch(Exception erro){
+            
+            }*/
+            
+            //cria um arquivo
+            /*String caminhoArquivo = ("C:\\\\Users\\\\gabri\\\\Documents\\\\GitHub\\\\Atividades-Senai\\\\Atividades_03\\novoArquivo.txt");
+            String textoEscrever = nome + " " + nota;
+            
+            try (
+            
             FileWriter criadorDeArquivo = new FileWriter(caminhoArquivo, true);
             BufferedWriter buffer = new BufferedWriter (criadorDeArquivo);
-            PrintWriter escritorDeArquivos = new PrintWriter(buffer);  
-                
-                ){
+            PrintWriter escritorDeArquivos = new PrintWriter(buffer);
+            
+            ){
             
             escritorDeArquivos.append(textoEscrever);
             
-        } catch (IOException e) {
+            } catch (IOException e) {
             e.printStackTrace();
             
-        }*/
+            }*/
+        
+        
         
     }
     
