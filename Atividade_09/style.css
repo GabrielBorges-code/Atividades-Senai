@@ -1,0 +1,36 @@
+body{
+    background: rgb(70, 142, 236) ;
+    font: arial 15pt Arial;
+
+}
+header{
+    color: white;
+    text-align: center;
+
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.733);
+}
+footer{
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+
+img{
+    height: 120px; 
+    display: block;
+    position:relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%);
+   
+}
+p {
+    text-align: justify;
+}
